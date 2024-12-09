@@ -1,5 +1,5 @@
 import { log } from "../lib/logger";
-import { init } from "../lib/scriptUtils";
+import { $$, init } from "../lib/scriptUtils";
 import { httpRequestHtml, httpRequestJson } from "../lib/corsUtils";
 
 /*
@@ -35,19 +35,49 @@ init("mau2Translator", () => {
     }
   }
 
+  function createButton() {
+    const button = document.createElement("button");
+    button.innerHTML = "あ→a";
+    button.style.marginLeft = "7px";
+    button.style.border = "1px solid #ac8553;";
+    button.style.backgroundColor = "#fcdfbb";
+    button.style.borderRadius = "0";
+    button.style.outline = "none";
+    button.style.cursor = "pointer";
+    return button;
+  }
+
   function injectButtons() {
     if (document.location.pathname.endsWith("/casts")) {
-      document.querySelectorAll(".animeCast1.list").forEach((castList) => {
+      // Is on /anime/:anime/casts
+      $$(".animeCast1.list").forEach((castList) => {
         const header = castList.querySelector('th[colspan="2"]');
         if (!header) return;
-        const button = document.createElement("button");
-        button.innerHTML = "あ→a";
-        button.style.marginLeft = "7px";
-        button.style.border = "1px solid #ac8553;";
-        button.style.backgroundColor = "#fcdfbb";
-        button.style.borderRadius = "0";
-        button.style.outline = "none";
-        button.style.cursor = "pointer";
+        const button = createButton();
+        button.addEventListener("click", () => {
+          const children = castList.querySelectorAll("tr:has(td.pgActor)");
+          children.forEach((child) => {
+            const part = child.querySelector(".pgPart") as HTMLElement;
+            const actor = child.querySelector(".pgActor") as HTMLElement;
+            if (!part || !actor) return;
+            prepareElement(part);
+            prepareElement(actor);
+            addToQueue("romaji", part.firstChild?.textContent || "Invalid String", part);
+            addToQueue("translation", part.firstChild?.textContent || "Invalid String", part);
+            addToQueue("romaji", actor.firstChild?.textContent || "Invalid String", actor);
+            addToQueue("translation", actor.firstChild?.textContent || "Invalid String", actor);
+          });
+          button.remove();
+        });
+        header.appendChild(button);
+      });
+    } else if (document.location.pathname.split("/").length === 3) {
+      // Is on /anime/:anime
+      console.log("UWO");
+      $$(".animeCast.list").forEach((castList) => {
+        const header = castList.querySelectorAll("th")[1];
+        if (!header) return;
+        const button = createButton();
         button.addEventListener("click", () => {
           const children = castList.querySelectorAll("tr:has(td.pgActor)");
           children.forEach((child) => {
