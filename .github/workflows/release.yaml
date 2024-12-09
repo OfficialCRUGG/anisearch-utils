@@ -30,9 +30,9 @@ jobs:
           echo "VERSION=${version}" >> $GITHUB_ENV
           echo "ZIP_FILE=${zip_file}" >> $GITHUB_ENV
       - name: Upload release asset
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v2
         with:
-          tag: ${{ github.event.inputs.release_tag }}
-          artifacts: ${{ env.ZIP_FILE }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ github.event.inputs.release_tag }}
+          files: ${{ env.ZIP_FILE }}
           draft: true
+          token: ${{ secrets.GITHUB_TOKEN }}
