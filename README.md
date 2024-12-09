@@ -9,6 +9,41 @@
 
 aniSearch Utils (aSutils for short) is a browser extension that adds various (toggleable) features to aniSearch, mainly intended for *power users*[^1].
 
+## Contents
+
+- [Installation](#installation)
+  - [Web Store](#web-store)
+  - [Manual](#manual)
+    - [Chrome](#chrome)
+    - [Edge, Opera, Opera GX, Brave, Vivaldi, Chromium](#edge-opera-opera-gx-brave-vivaldi-chromium)
+    - [Firefox](#firefox)
+- [Modules](#modules)
+  - [Anime Page](#anime-page)
+  - [Input](#input)
+  - [Extras (External Sites)](#extras-external-sites)
+
+## Installation
+
+### Web Store
+
+Not available yet
+
+### Manual
+
+Download the latest release from the [releases page](https://github.com/OfficialCRUGG/anisearch-utils/releases) and follow the instructions for your browser below.
+
+#### Chrome
+
+Open `chrome://extensions` and enable "Developer mode" in the top right corner. Then, drag and drop the downloaded zip into the window.
+
+#### Edge, Opera, Opera GX, Brave, Vivaldi, Chromium
+
+Since these browsers are based on Chromium, the process should be the same as for Chrome.
+
+#### Firefox
+
+Not supported yet. Will get this to work very soon hopefully. Firefox is just a little bit extra on some things.
+
 ## Modules
 
 ### Anime Page

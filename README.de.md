@@ -11,6 +11,41 @@ aniSearch Utils (aSutils, aSu for short) is a browser extension that adds variou
 
 aniSearch Helfer (kurz aSutils oder aSu; vom englischen Namen "aniSearch Utils") ist eine Browserweiterung, die verschiedene (einzeln aktivierbare) Funktionen zu aniSearch hinzufügt, die hauptsächlich für *Power-User*[^1] gedacht sind.
 
+## Inhaltsverzeichnis
+
+- [Installation](#installation)
+  - [Web Store](#web-store)
+  - [Manuell](#manuell)
+    - [Chrome](#chrome)
+    - [Edge, Opera, Opera GX, Brave, Vivaldi, Chromium](#edge-opera-opera-gx-brave-vivaldi-chromium)
+    - [Firefox](#firefox)
+- [Module](#module)
+  - [Anime-Seite](#anime-seite)
+  - [Eingabemaske](#eingabemaske)
+  - [Extras (Externe Seiten)](#extras-externe-seiten)
+
+## Installation
+
+### Web Store
+
+Noch nicht verfügbar
+
+### Manuell
+
+Lade die neueste Version von der [Releases-Seite](https://github.com/OfficialCRUGG/anisearch-utils/releases) herunter und folge den Anweisungen für deinen Browser im folgenden.
+
+#### Chrome
+
+Öffne `chrome://extensions` und aktiviere den "Entwicklermodus" oben rechts. Ziehe dann die heruntergeladene Zip in das Fenster.
+
+#### Edge, Opera, Opera GX, Brave, Vivaldi, Chromium
+
+Da diese Browser auf Chromium basieren, sollte der Prozess derselbe wie bei Chrome sein.
+
+#### Firefox
+
+Noch nicht unterstützt. Ich werde das hoffentlich sehr bald zum Laufen bekommen. Firefox ist leider ein bisschen speziell bei einigen Dingen.
+
 ## Module
 
 ### Anime-Seite
