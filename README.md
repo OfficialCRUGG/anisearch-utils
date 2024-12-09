@@ -8,6 +8,9 @@
   <a href="https://github.com/OfficialCRUGG/anisearch-utils/blob/main/README.de.md">Readme auf Deutsch</a>
 </div>
 
+> [!NOTE]
+> aniSearch Utils is not affiliated with or endorsed by aniSearch. This is a third-party extension.
+
 aniSearch Utils (aSutils for short) is a browser extension that adds various (toggleable) features to aniSearch, mainly intended for *power users*[^1].
 
 ## Contents

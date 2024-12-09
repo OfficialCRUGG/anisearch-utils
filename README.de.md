@@ -8,6 +8,9 @@
   <a href="https://github.com/OfficialCRUGG/anisearch-utils/blob/main/README.md">Readme in English</a>
 </div>
 
+> [!NOTE]
+> Der aniSearch Helfer steht in keinerlei Verbindung zu aniSearch. Es handelt sich hierbei um eine Browsererweiterung eines Drittanbieters.
+
 aniSearch Helfer (kurz aSutils oder aSu; vom englischen Namen "aniSearch Utils") ist eine Browserweiterung, die verschiedene (einzeln aktivierbare) Funktionen zu aniSearch hinzufügt, die hauptsächlich für *Power-User*[^1] gedacht sind.
 
 ## Inhaltsverzeichnis
