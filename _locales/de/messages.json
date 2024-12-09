@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "aniSearch Helferlein"
+  },
+  "group_animePage_title": {
+    "message": "Anime Seite"
+  },
+  "setting_linkMau2_name": {
+    "message": "Link zu Mau2"
+  },
+  "setting_linkMau2_description": {
+    "message": "Fügt einen Link zur japanischen Synchronsprecherseite auf Mau2 hinzu"
+  }
+}

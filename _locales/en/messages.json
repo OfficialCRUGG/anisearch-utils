@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "aniSearch Utils"
+  },
+  "group_animePage_title": {
+    "message": "Anime Page"
+  },
+  "setting_linkMau2_name": {
+    "message": "Link to Mau2"
+  },
+  "setting_linkMau2_description": {
+    "message": "Adds a link to the japanese voice cast page on Mau2"
+  }
+}
