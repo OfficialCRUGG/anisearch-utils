@@ -1,8 +1,13 @@
 name: Release Workflow
 
 on:
-  release:
-    types: [created]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release tag"
+        required: true
+        type: string
+        default: "0.0.0"
 
 jobs:
   build-and-upload-release:
@@ -25,10 +30,9 @@ jobs:
           echo "VERSION=${version}" >> $GITHUB_ENV
           echo "ZIP_FILE=${zip_file}" >> $GITHUB_ENV
       - name: Upload release asset
-        uses: actions/upload-release-asset@v1
+        uses: ncipollo/release-action@v1
         with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{ env.ZIP_FILE }}
-          asset_name: "aSu-${{ env.VERSION }}.zip"
-          asset_content_type: application/zip
+          tag: ${{ github.event.inputs.release_tag }}
+          artifacts: ${{ env.ZIP_FILE }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          draft: true
