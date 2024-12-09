@@ -8,8 +8,6 @@
   <a href="https://github.com/OfficialCRUGG/anisearch-utils/blob/main/README.md">Readme in English</a>
 </div>
 
-aniSearch Utils (aSutils, aSu for short) is a browser extension that adds various (toggleable) features to aniSearch, mainly intended for *power users*[^1].
-
 aniSearch Helfer (kurz aSutils oder aSu; vom englischen Namen "aniSearch Utils") ist eine Browserweiterung, die verschiedene (einzeln aktivierbare) Funktionen zu aniSearch hinzufügt, die hauptsächlich für *Power-User*[^1] gedacht sind.
 
 ## Inhaltsverzeichnis
