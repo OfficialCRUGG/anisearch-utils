@@ -28,4 +28,7 @@
   .settingGroup--header--title {
     font-size: 1rem;
   }
+  .settingGroup--content {
+    background-color: #262626;
+  }
 </style>

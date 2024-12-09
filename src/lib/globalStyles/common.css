@@ -28,12 +28,44 @@
 }
 
 .asubutton-secondary {
-  background-color: #cbcbcb;
-  color: #000000;
+  background-color: #cbcbcb !important;
+  color: #000000 !important;
 }
 
 .asubutton-secondary:hover,
 .asubutton-secondary:focus,
 .asubutton-secondary:active {
-  background-color: #e6e6e6;
+  background-color: #e6e6e6 !important;
+}
+
+.asubutton-submit {
+  background-color: #51824d !important
+  color: #fff;
+}
+
+.asubuttom-submit:hover,
+.asubutton-submit:focus,
+.asubutton-submit:active {
+  background-color: #3d623a !important;
+}
+
+.asubutton-delete {
+  background-color: #c84d4d !important;
+}
+
+.asubutton-delete:hover,
+.asubutton-delete:focus,
+.asubutton-delete:active {
+  background-color: #ad3535 !important;
+}
+
+.asubutton-tertiary {
+  background-color: #d38022 !important;
+  color: #fff !important;
+}
+
+.asubutton-tertiary:hover,
+.asubutton-tertiary:focus,
+.asubutton-tertiary:active {
+  background-color: #b86b1a !important;
 }

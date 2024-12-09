@@ -21,7 +21,7 @@
       "Helvetica Neue",
       sans-serif;
 
-    background-color: #262626;
+    background-color: #1d1d1d;
     color: #e0e0e0;
     font-size: 150%;
   }

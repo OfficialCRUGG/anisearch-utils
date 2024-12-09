@@ -42,6 +42,12 @@ export default defineManifest({
       matches: [],
     },
   ],
+  host_permissions: [
+    ...createLinkVariants("https://www.anisearch.com/*"),
+    "https://www.romajidesu.com/*",
+    "https://translate.googleapis.com/*",
+    "https://www.mau2.com/*",
+  ],
   default_locale: "en",
-  permissions: ["sidePanel", "storage", "activeTab", "scripting"],
+  permissions: ["sidePanel", "storage", "activeTab", "scripting", "unlimitedStorage"],
 });

@@ -6,6 +6,7 @@ export function log(module: string, message: string): void {
     loader: "#3E8EF7",
     registry: "#8E44AD",
     styles: "#F7CA18",
+    error: "#952217",
   };
 
   // Get the background color for the module or use the default

@@ -31,6 +31,22 @@ export const settings: Setting[] = [
     module: true,
     matches: createLinkVariants("/anime/*"),
   },
+  {
+    group: "input",
+    id: "inputButtonColors",
+    type: "boolean",
+    default: false,
+    module: true,
+    matches: createLinkVariants("/usercp/input/**"),
+  },
+  {
+    group: "extrasExternal",
+    id: "mau2Translator",
+    type: "boolean",
+    default: false,
+    module: true,
+    matches: ["https://www.mau2.com/anime/*/casts"],
+  },
 ];
 
 export function getGroups() {

@@ -1,0 +1,4 @@
+{
+  "error.label": "An error occured: ",
+  "error.queueStopped": "The queue in question has been stopped. Please try refreshing the page and re-queueing translations. If the issue persists, you were ratelimited by the service used. In that case, wait 10-30 minutes and try again."
+}

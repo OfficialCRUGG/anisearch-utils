@@ -2,5 +2,9 @@
   "linkMau2.name": "Link zu Mau2",
   "linkMau2.description": "Fügt einen Link zur japanischen Synchronsprecherseite auf Mau2 hinzu",
   "linkMau2Translate.name": "Link zu Mau2 (Google Übersetzer)",
-  "linkMau2Translate.description": "Fügt einen Link zur japanischen Synchronsprecherseite auf Mau2 hinzu, der durch Google Übersetzer übersetzt wird (funktioniert besser, als man sich vorstellt, zumindest für die Sprechernamen, für die Charaktere eher weniger)"
+  "linkMau2Translate.description": "Fügt einen Link zur japanischen Synchronsprecherseite auf Mau2 hinzu, der durch Google Übersetzer übersetzt wird (funktioniert besser, als man sich vorstellt, zumindest für die Sprechernamen, für die Charaktere eher weniger)",
+  "inputButtonColors.name": "Farbige Buttons",
+  "inputButtonColors.description": "Schon mal auf den falschen Button geklickt? Jetzt sind alle 'Ersetzen'-Buttons orange und alle 'Zurücksetzen'-Buttons rot.",
+  "mau2Translator.name": "Übersetzer (mau2.com)",
+  "mau2Translator.description": "Fügt auf mau2.com Buttons hinzu, um die Einträge in Romaji und Englisch zu übersetzen"
 }

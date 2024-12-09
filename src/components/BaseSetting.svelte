@@ -19,12 +19,14 @@
 <div class="setting">
   <div class="setting--text">
     <div class="setting--title">
-      <h3>{name}</h3>
-      {#if description && description.length > 0}
-        <button class="setting--descriptionButton" on:click={() => (showDescription = !showDescription)}>
-          <IconQuestion />
-        </button>
-      {/if}
+      <h3>
+        {name}
+        {#if description && description.length > 0}
+          <button class="setting--descriptionButton" on:click={() => (showDescription = !showDescription)}>
+            <IconQuestion />
+          </button>
+        {/if}
+      </h3>
     </div>
     {#if showDescription}
       <p>{description}</p>
@@ -39,10 +41,6 @@
   .setting {
     padding: 0.25rem 0.5rem;
   }
-  .setting--title {
-    display: flex;
-    align-items: center;
-  }
   .setting--descriptionButton {
     background: none;
     border: none;
@@ -55,12 +53,18 @@
     padding-inline: 0;
     font-size: inherit;
     padding-top: 0.2em;
+    display: inline;
   }
   .setting {
     display: flex;
     justify-content: space-between;
   }
+  .setting--value {
+    padding-left: 0.5rem;
+  }
+  /*
   .setting > * {
     max-width: 50%;
   }
+    */
 </style>

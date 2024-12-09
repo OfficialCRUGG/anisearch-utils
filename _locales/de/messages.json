@@ -1,6 +1,24 @@
 {
+  "general_disclaimer": {
+    "message": "Diese Erweiterung steht in keiner Verbindung zu aniSearch und wird auch nicht von aniSearch unterstützt. Es handelt sich um ein Drittanbieter-Tool."
+  },
+  "general_copyright": {
+    "message": "Verfügbar unter der MIT-Lizenz"
+  },
+  "general_storage_local": {
+    "message": "Speicherplatzverbrauch (Mau2 Wörterbücher)"
+  },
+  "general_storage_sync": {
+    "message": "Speicherplatzverbrauch (Einstellungen)"
+  },
   "groups_animePage_title": {
     "message": "Anime Seite"
+  },
+  "groups_input_title": {
+    "message": "Eingabemaske"
+  },
+  "groups_extrasExternal_title": {
+    "message": "Extras (Externe Seiten)"
   },
   "meta_name": {
     "message": "aniSearch Helfer"
@@ -16,6 +34,18 @@
   },
   "settings_linkMau2Translate_description": {
     "message": "Fügt einen Link zur japanischen Synchronsprecherseite auf Mau2 hinzu, der durch Google Übersetzer übersetzt wird (funktioniert besser, als man sich vorstellt, zumindest für die Sprechernamen, für die Charaktere eher weniger)"
+  },
+  "settings_inputButtonColors_name": {
+    "message": "Farbige Buttons"
+  },
+  "settings_inputButtonColors_description": {
+    "message": "Schon mal auf den falschen Button geklickt? Jetzt sind alle 'Ersetzen'-Buttons orange und alle 'Zurücksetzen'-Buttons rot."
+  },
+  "settings_mau2Translator_name": {
+    "message": "Übersetzer (mau2.com)"
+  },
+  "settings_mau2Translator_description": {
+    "message": "Fügt auf mau2.com Buttons hinzu, um die Einträge in Romaji und Englisch zu übersetzen"
   },
   "modules_linkMau2_button_text": {
     "message": "Mau2"
