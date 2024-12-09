@@ -1,0 +1,34 @@
+name: Release Workflow
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build-and-upload-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm build
+      - name: Find the generated zip file
+        run: |
+          version=$(jq -r .version package.json)
+          zip_file="packages/aniSearch-Utils-${version}.zip"
+          echo "VERSION=${version}" >> $GITHUB_ENV
+          echo "ZIP_FILE=${zip_file}" >> $GITHUB_ENV
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ${{ env.ZIP_FILE }}
+          asset_name: "aSu-${{ env.VERSION }}.zip"
+          asset_content_type: application/zip
+          token: ${{ secrets.GITHUB_TOKEN }}
