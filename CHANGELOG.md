@@ -1,5 +1,5 @@
-# CHANGELOG
+# Changelog
 
-## 0.0.0 [2024.12.09]
+## 0.1.0 [2024.12.09]
 
-- TODO
+- Initial release
