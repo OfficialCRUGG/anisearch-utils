@@ -1,9 +1,10 @@
+<div align="center">
+
 # aniSearch Helfer
 
 | Available in English | Verfügbar auf Deutsch |
 |----------------------|-----------------------|
 
-<div align="center">
   <a href="https://github.com/OfficialCRUGG/anisearch-utils/blob/main/READMEmd">Readme in English</a>
 </div>
 
