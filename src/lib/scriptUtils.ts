@@ -55,3 +55,9 @@ export function buildAsuButton(options: AsuButtonOptions): HTMLAnchorElement | H
   if (options.onClick) button.addEventListener("click", options.onClick);
   return button;
 }
+
+export function injectCss(css: string): void {
+  const style = document.createElement("style");
+  style.textContent = css;
+  document.head.appendChild(style);
+}

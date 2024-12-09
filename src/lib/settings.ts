@@ -47,6 +47,14 @@ export const settings: Setting[] = [
     module: true,
     matches: ["https://www.mau2.com/anime/*/casts", "https://www.mau2.com/anime/*"],
   },
+  {
+    group: "visualTweaks",
+    id: "fullWidth",
+    type: "boolean",
+    default: false,
+    module: true,
+    matches: createLinkVariants("/*"),
+  },
 ];
 
 export function getGroups() {

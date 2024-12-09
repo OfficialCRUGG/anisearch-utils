@@ -1,13 +1,12 @@
 import { log } from "../lib/logger";
 import commonStyles from "../lib/globalStyles/common.css?raw";
+import { injectCss } from "../lib/scriptUtils";
 
 log("loader", "Loading common script");
 
 injectGlobalStyles();
 
 function injectGlobalStyles() {
-  const style = document.createElement("style");
-  style.innerHTML = commonStyles;
-  document.head.appendChild(style);
+  injectCss(commonStyles);
   log("styles", "Injecting global styles");
 }
