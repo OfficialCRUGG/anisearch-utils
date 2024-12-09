@@ -5,12 +5,13 @@ root = true
 
 # Unix-style newlines with a newline ending every file
 [*]
+tab_width = 2
 end_of_line = lf
 insert_final_newline = true
 
 # Matches multiple files with brace expansion notation
 # Set default charset
-[*.{js,jsx,ts,tsx,md,svelte}]
+[*.{js,jsx,ts,tsx,md,svelte,css}]
 charset = utf-8
 indent_style = space
 indent_size = 2

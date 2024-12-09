@@ -1,6 +1,7 @@
 import { defineManifest } from "@crxjs/vite-plugin";
 import packageData from "../package.json";
 import { getContentScriptEntries } from "./lib/settings";
+import { createLinkVariants } from "./lib/scriptUtils";
 
 //@ts-ignore
 const isDev = process.env.NODE_ENV == "development";
@@ -27,7 +28,7 @@ export default defineManifest({
   },
   content_scripts: [
     {
-      matches: ["http://*/*", "https://*/*"],
+      matches: createLinkVariants("https://www.anisearch.com/**"),
       js: ["src/content/index.ts"],
     },
     ...getContentScriptEntries(),

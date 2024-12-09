@@ -1,14 +1,32 @@
 {
-  "extensionName": {
-    "message": "aniSearch Utils"
-  },
-  "group_animePage_title": {
+  "groups_animePage_title": {
     "message": "Anime Page"
   },
-  "setting_linkMau2_name": {
+  "meta_name": {
+    "message": "aniSearch Utils"
+  },
+  "settings_linkMau2_name": {
     "message": "Link to Mau2"
   },
-  "setting_linkMau2_description": {
+  "settings_linkMau2_description": {
     "message": "Adds a link to the japanese voice cast page on Mau2"
+  },
+  "settings_linkMau2Translate_name": {
+    "message": "Link to Mau2 (Google Translate)"
+  },
+  "settings_linkMau2Translate_description": {
+    "message": "Adds a link to the japanese voice cast page on Mau2, translated through Google Translate (functions better as you'd expect, at least for the VA names, less for the characters)"
+  },
+  "modules_linkMau2_button_text": {
+    "message": "Mau2"
+  },
+  "modules_linkMau2_button_tooltip": {
+    "message": "Searches for this anime on Mau2"
+  },
+  "modules_linkMau2Translate_button_text": {
+    "message": "Mau2 (G Translate)"
+  },
+  "modules_linkMau2Translate_button_tooltip": {
+    "message": "Searches for this anime on Mau2 through Google Translate"
   }
 }

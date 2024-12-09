@@ -17,15 +17,18 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:ext": "vite build",
+    "build:locales": "tsx buildLocales.ts",
+    "build:zip": "node src/zip.js",
+    "build": "npm run build:ext && npm run build:locales && npm run build:zip",
     "preview": "vite preview",
-    "fmt": "prettier --write '**/*.{svelte,ts,json,css,scss,md}'",
-    "zip": "npm run build && node src/zip.js"
+    "fmt": "prettier --write '**/*.{svelte,ts,json,css,scss,md}'"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.19",
     "@sveltejs/vite-plugin-svelte": "2.4.6",
     "@types/chrome": "^0.0.246",
+    "@types/node": "^22.10.1",
     "gulp": "^4.0.2",
     "gulp-zip": "^6.0.0",
     "prettier": "^3.0.3",
@@ -33,6 +36,7 @@
     "svelte": "^4.2.1",
     "svelte-preprocess": "^5.0.4",
     "tslib": "^2.6.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.2.2",
     "vite": "^4.4.11"
   }

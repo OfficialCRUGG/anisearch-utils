@@ -1,14 +1,32 @@
 {
-  "extensionName": {
-    "message": "aniSearch Helferlein"
-  },
-  "group_animePage_title": {
+  "groups_animePage_title": {
     "message": "Anime Seite"
   },
-  "setting_linkMau2_name": {
+  "meta_name": {
+    "message": "aniSearch Helfer"
+  },
+  "settings_linkMau2_name": {
     "message": "Link zu Mau2"
   },
-  "setting_linkMau2_description": {
+  "settings_linkMau2_description": {
     "message": "Fügt einen Link zur japanischen Synchronsprecherseite auf Mau2 hinzu"
+  },
+  "settings_linkMau2Translate_name": {
+    "message": "Link zu Mau2 (Google Übersetzer)"
+  },
+  "settings_linkMau2Translate_description": {
+    "message": "Fügt einen Link zur japanischen Synchronsprecherseite auf Mau2 hinzu, der durch Google Übersetzer übersetzt wird (funktioniert besser, als man sich vorstellt, zumindest für die Sprechernamen, für die Charaktere eher weniger)"
+  },
+  "modules_linkMau2_button_text": {
+    "message": "Mau2"
+  },
+  "modules_linkMau2_button_tooltip": {
+    "message": "Sucht auf Mau2 nach diesem Anime"
+  },
+  "modules_linkMau2Translate_button_text": {
+    "message": "Mau2 (G Übersetzer)"
+  },
+  "modules_linkMau2Translate_button_tooltip": {
+    "message": "Sucht auf Mau2 nach diesem Anime durch Google Übersetzer"
   }
 }

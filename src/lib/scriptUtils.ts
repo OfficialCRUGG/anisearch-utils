@@ -30,3 +30,28 @@ export function createLinkVariants(link: string) {
   const variants = sites.map((site) => link.replace("anisearch.com", site));
   return variants;
 }
+
+type AsuButtonOptions = {
+  element: "a" | "button";
+  className?: string;
+  variant?: "primary" | "secondary";
+  text: string;
+  tooltip?: string;
+  href?: string;
+  onClick?: (event: MouseEvent) => void;
+};
+
+export function buildAsuButton(options: AsuButtonOptions): HTMLAnchorElement | HTMLButtonElement {
+  const button = document.createElement(options.element);
+  const variantClasses = {
+    primary: "",
+    secondary: "asubutton-secondary",
+  };
+  button.className = `asubutton ${variantClasses[options.variant || "primary"]} ${options.className || ""}`;
+  button.textContent = options.text;
+  if (options.tooltip) button.title = options.tooltip;
+  if (options.href) (button as HTMLAnchorElement).href = options.href;
+  // @ts-ignore
+  if (options.onClick) button.addEventListener("click", options.onClick);
+  return button;
+}

@@ -6,7 +6,7 @@
   let title = "";
 
   onMount(() => {
-    title = chrome.i18n.getMessage(`group_${id}_title`);
+    title = chrome.i18n.getMessage(`groups_${id}_title`);
   });
 </script>
 

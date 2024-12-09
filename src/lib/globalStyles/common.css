@@ -1,0 +1,39 @@
+.asubutton {
+  font-family: inherit;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  height: 28px;
+  font-size: 13px;
+  padding: 5 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: #3177b2;
+  color: #fff;
+  line-height: 1.4;
+  margin: 0;
+  padding-block: 1px;
+  padding-inline: 6px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.asubutton:hover,
+.asubutton:focus,
+.asubutton:active {
+  background-color: #4991cd;
+  text-decoration: none;
+}
+
+.asubutton-secondary {
+  background-color: #cbcbcb;
+  color: #000000;
+}
+
+.asubutton-secondary:hover,
+.asubutton-secondary:focus,
+.asubutton-secondary:active {
+  background-color: #e6e6e6;
+}

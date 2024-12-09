@@ -23,6 +23,14 @@ export const settings: Setting[] = [
     module: true,
     matches: createLinkVariants("/anime/*"),
   },
+  {
+    group: "animePage",
+    id: "linkMau2Translate",
+    type: "boolean",
+    default: false,
+    module: true,
+    matches: createLinkVariants("/anime/*"),
+  },
 ];
 
 export function getGroups() {

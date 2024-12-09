@@ -11,8 +11,8 @@
   let description = "";
 
   onMount(() => {
-    name = chrome.i18n.getMessage(`setting_${setting.id}_name`);
-    description = chrome.i18n.getMessage(`setting_${setting.id}_description`);
+    name = chrome.i18n.getMessage(`settings_${setting.id}_name`);
+    description = chrome.i18n.getMessage(`settings_${setting.id}_description`);
   });
 </script>
 

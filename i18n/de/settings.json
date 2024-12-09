@@ -1,0 +1,6 @@
+{
+  "linkMau2.name": "Link zu Mau2",
+  "linkMau2.description": "Fügt einen Link zur japanischen Synchronsprecherseite auf Mau2 hinzu",
+  "linkMau2Translate.name": "Link zu Mau2 (Google Übersetzer)",
+  "linkMau2Translate.description": "Fügt einen Link zur japanischen Synchronsprecherseite auf Mau2 hinzu, der durch Google Übersetzer übersetzt wird (funktioniert besser, als man sich vorstellt, zumindest für die Sprechernamen, für die Charaktere eher weniger)"
+}
