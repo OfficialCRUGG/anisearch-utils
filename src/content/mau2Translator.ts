@@ -1,5 +1,5 @@
 import { log } from "../lib/logger";
-import { $$, init } from "../lib/scriptUtils";
+import { $, $$, init } from "../lib/scriptUtils";
 import { httpRequestHtml, httpRequestJson } from "../lib/corsUtils";
 
 /*
@@ -47,52 +47,41 @@ init("mau2Translator", () => {
     return button;
   }
 
+  function createTranslationButton(tableEl: HTMLElement) {
+    const button = createButton();
+    button.addEventListener("click", () => {
+      const children = tableEl.querySelectorAll("tr:has(td.pgActor)");
+      children.forEach((child) => {
+        const part = child.querySelector(".pgPart") as HTMLElement;
+        const actor = child.querySelector(".pgActor") as HTMLElement;
+        if (!part || !actor) return;
+        prepareElement(part);
+        prepareElement(actor);
+        addToQueue("romaji", part.firstChild?.textContent || "Invalid String", part);
+        addToQueue("translation", part.firstChild?.textContent || "Invalid String", part);
+        addToQueue("romaji", actor.firstChild?.textContent || "Invalid String", actor);
+        addToQueue("translation", actor.firstChild?.textContent || "Invalid String", actor);
+      });
+      button.remove();
+    });
+    return button;
+  }
+
   function injectButtons() {
     if (document.location.pathname.endsWith("/casts") || document.location.pathname.endsWith("/cast")) {
       // Is on /anime/:anime/cast(s)
       $$(".animeCast1.list").forEach((castList) => {
         const header = castList.querySelector('th[colspan="2"]');
         if (!header) return;
-        const button = createButton();
-        button.addEventListener("click", () => {
-          const children = castList.querySelectorAll("tr:has(td.pgActor)");
-          children.forEach((child) => {
-            const part = child.querySelector(".pgPart") as HTMLElement;
-            const actor = child.querySelector(".pgActor") as HTMLElement;
-            if (!part || !actor) return;
-            prepareElement(part);
-            prepareElement(actor);
-            addToQueue("romaji", part.firstChild?.textContent || "Invalid String", part);
-            addToQueue("translation", part.firstChild?.textContent || "Invalid String", part);
-            addToQueue("romaji", actor.firstChild?.textContent || "Invalid String", actor);
-            addToQueue("translation", actor.firstChild?.textContent || "Invalid String", actor);
-          });
-          button.remove();
-        });
+        const button = createTranslationButton(castList);
         header.appendChild(button);
       });
     } else if (document.location.pathname.split("/").length === 3) {
       // Is on /anime/:anime
-      console.log("UWO");
       $$(".animeCast.list").forEach((castList) => {
         const header = castList.querySelectorAll("th")[1];
         if (!header) return;
-        const button = createButton();
-        button.addEventListener("click", () => {
-          const children = castList.querySelectorAll("tr:has(td.pgActor)");
-          children.forEach((child) => {
-            const part = child.querySelector(".pgPart") as HTMLElement;
-            const actor = child.querySelector(".pgActor") as HTMLElement;
-            if (!part || !actor) return;
-            prepareElement(part);
-            prepareElement(actor);
-            addToQueue("romaji", part.firstChild?.textContent || "Invalid String", part);
-            addToQueue("translation", part.firstChild?.textContent || "Invalid String", part);
-            addToQueue("romaji", actor.firstChild?.textContent || "Invalid String", actor);
-            addToQueue("translation", actor.firstChild?.textContent || "Invalid String", actor);
-          });
-          button.remove();
-        });
+        const button = createTranslationButton(castList);
         header.appendChild(button);
       });
     }
@@ -210,7 +199,7 @@ init("mau2Translator", () => {
   }
 
   function getErrorContainer() {
-    const existingErrorContainer = document.querySelector(".asu-mau2-error");
+    const existingErrorContainer = $(".asu-mau2-error");
     if (existingErrorContainer) return existingErrorContainer;
     const errorContainer = document.createElement("div");
     errorContainer.style.position = "fixed";
@@ -276,7 +265,130 @@ init("mau2Translator", () => {
     chrome.storage.local.set({ [key]: Object.fromEntries(dictToSave) });
   }
 
+  function injectFullListButton() {
+    if (!(document.location.pathname.endsWith("/casts") || document.location.pathname.endsWith("/cast"))) return;
+
+    const button = createButton();
+    button.innerHTML = "Create Full List";
+    button.style.marginTop = "10px";
+    button.addEventListener("click", () => {
+      // Collect data
+      const voiceActors: { part: string; actor: string; episodes: string[] }[] = [];
+      const episodeLists = $$(".animeCast1.list");
+      episodeLists.forEach((list) => {
+        const heading = list.querySelector("th[colspan='2']")?.textContent;
+        const episode = heading?.match(/\d+/)?.[0];
+        const actors = list.querySelectorAll("tr:has(td.pgActor)");
+        actors.forEach((item) => {
+          const part = item.querySelector(".pgPart")?.textContent;
+          const actor = item.querySelector(".pgActor")?.textContent;
+          if (!part || !actor) return;
+          const existingEntry = voiceActors.find((entry) => entry.part === part && entry.actor === actor);
+          if (existingEntry) {
+            existingEntry.episodes.push(episode || "0");
+          } else {
+            voiceActors.push({
+              episodes: [episode || "0"],
+              part,
+              actor,
+            });
+          }
+        });
+      });
+
+      // Merge episodes in a row
+      voiceActors.forEach((actor) => {
+        let previousEpisode = 0;
+        const episodes = actor.episodes.map(Number);
+        const episodeBundles: number[][] = [];
+        episodes.forEach((episode) => {
+          // If the previous episode is 0, create a new bundle
+          if (previousEpisode === 0) {
+            episodeBundles.push([episode]);
+          } else {
+            // Check if the current episode is directly after the previous one
+            if (episode === previousEpisode + 1) {
+              // Add episode to last bundle
+              episodeBundles[episodeBundles.length - 1].push(episode);
+            } else {
+              // Create a new bundle
+              episodeBundles.push([episode]);
+            }
+          }
+          previousEpisode = episode;
+        });
+
+        // Convert bundles to strings
+        actor.episodes = episodeBundles.map((bundle) => {
+          if (bundle.length < 3) return bundle.join(",");
+          return `${bundle[0]}-${bundle[bundle.length - 1]}`;
+        });
+      });
+
+      // Construct Table
+      const table = document.createElement("table");
+      table.className = "animeCast1 list exdingbats";
+      table.style.width = "100%";
+
+      const tbody = document.createElement("tbody");
+      table.appendChild(tbody);
+
+      const headingTr = document.createElement("tr");
+      tbody.appendChild(headingTr);
+
+      const headingTh = document.createElement("th");
+      headingTh.colSpan = 3;
+      headingTh.textContent = "Full List";
+      headingTr.appendChild(headingTh);
+
+      voiceActors.forEach((actor, index) => {
+        const isEven = index % 2 === 0;
+
+        const tr = document.createElement("tr");
+        if (isEven) tr.classList.add("even");
+        tbody.appendChild(tr);
+
+        const partTd = document.createElement("td");
+        partTd.className = "pgPart";
+        partTd.textContent = actor.part;
+        tr.appendChild(partTd);
+
+        const actorTd = document.createElement("td");
+        actorTd.className = "pgActor";
+        actorTd.textContent = actor.actor;
+        tr.appendChild(actorTd);
+
+        const episodesTd = document.createElement("td");
+        episodesTd.className = "pgEpisodes";
+        episodesTd.textContent = actor.episodes.join(",");
+        tr.appendChild(episodesTd);
+      });
+
+      const referenceEl = $("#animeCastM .lineUp");
+      referenceEl?.parentElement?.insertBefore(table, referenceEl);
+
+      // Inject Translation Button
+      const button = createTranslationButton(table);
+      headingTh.appendChild(button);
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    const hintSpan = document.createElement("span");
+    hintSpan.style.fontSize = "14px";
+    hintSpan.style.color = "#777";
+    hintSpan.style.display = "block";
+    hintSpan.innerHTML =
+      "Important: Only use this, when you haven't already translated anything in the individual lists.<br>Also, if the Headings of the individual Lists don't contain numbers, or contain odd episode numerations like '1.5', this feature will not work.<br>Also please note that this only affects episodes that are on a singular page. For animes that have multiple pages, you can still use this feature, but it will only contains actors, roles, and episodes from the current page.";
+
+    const referenceEl = $("#animeBoxMain hr");
+    referenceEl?.parentElement?.insertBefore(button, referenceEl);
+    referenceEl?.parentElement?.insertBefore(hintSpan, referenceEl);
+  }
+
   injectButtons();
   beginQueues();
   loadDictsFromStorage();
+  injectFullListButton();
 });
