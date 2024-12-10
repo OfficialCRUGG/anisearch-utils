@@ -379,8 +379,11 @@ init("mau2Translator", () => {
     hintSpan.style.fontSize = "14px";
     hintSpan.style.color = "#777";
     hintSpan.style.display = "block";
-    hintSpan.innerHTML =
-      "Important: Only use this, when you haven't already translated anything in the individual lists.<br>Also, if the Headings of the individual Lists don't contain numbers, or contain odd episode numerations like '1.5', this feature will not work.<br>Also please note that this only affects episodes that are on a singular page. For animes that have multiple pages, you can still use this feature, but it will only contains actors, roles, and episodes from the current page.";
+    hintSpan.innerHTML = [
+      chrome.i18n.getMessage("modules_mau2Translator_fullList_hint1"),
+      chrome.i18n.getMessage("modules_mau2Translator_fullList_hint2"),
+      chrome.i18n.getMessage("modules_mau2Translator_fullList_hint3"),
+    ].join("<br>");
 
     const referenceEl = $("#animeBoxMain hr");
     referenceEl?.parentElement?.insertBefore(button, referenceEl);
