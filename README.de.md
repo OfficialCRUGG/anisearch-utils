@@ -50,6 +50,10 @@ Noch nicht unterstützt. Ich werde das hoffentlich sehr bald zum Laufen bekommen
 
 ## Module
 
+### Visuelle Anpassungen
+
+- **Volle Breite**: Lässt die Website die volle Breite des Bildschirms nutzen.
+
 ### Anime-Seite
 
 - **Link zu Mau2**: Fügt einen Button hinzu, der zur Suchseite des jeweiligen Anime auf Mau 2 führt, einer japanischen Website für Informationen bezüglich Synchronsprechern.

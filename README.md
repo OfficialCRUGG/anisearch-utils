@@ -50,6 +50,10 @@ Not supported yet. Will get this to work very soon hopefully. Firefox is just a 
 
 ## Modules
 
+### Visal Tweaks
+
+- **Full Width**: Makes the website use the full width of the screen.
+
 ### Anime Page
 
 - **Link to Mau2**: Adds a button that leads to the search page for the respective anime on Mau2, a japanese website for voice actor information.
