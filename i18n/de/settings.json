@@ -6,5 +6,7 @@
   "inputButtonColors.name": "Farbige Buttons",
   "inputButtonColors.description": "Schon mal auf den falschen Button geklickt? Jetzt sind alle 'Ersetzen'-Buttons orange und alle 'Zurücksetzen'-Buttons rot.",
   "mau2Translator.name": "Übersetzer (mau2.com)",
-  "mau2Translator.description": "Fügt auf mau2.com Buttons hinzu, um die Einträge in Romaji und Englisch zu übersetzen"
+  "mau2Translator.description": "Fügt auf mau2.com Buttons hinzu, um die Einträge in Romaji und Englisch zu übersetzen",
+  "fullWidth.name": "Volle Breite",
+  "fullWidth.description": "Lässt die Seite in voller Breite erscheinen"
 }
