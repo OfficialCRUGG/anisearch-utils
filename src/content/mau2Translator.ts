@@ -48,8 +48,8 @@ init("mau2Translator", () => {
   }
 
   function injectButtons() {
-    if (document.location.pathname.endsWith("/casts")) {
-      // Is on /anime/:anime/casts
+    if (document.location.pathname.endsWith("/casts") || document.location.pathname.endsWith("/cast")) {
+      // Is on /anime/:anime/cast(s)
       $$(".animeCast1.list").forEach((castList) => {
         const header = castList.querySelector('th[colspan="2"]');
         if (!header) return;

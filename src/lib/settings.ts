@@ -45,7 +45,11 @@ export const settings: Setting[] = [
     type: "boolean",
     default: false,
     module: true,
-    matches: ["https://www.mau2.com/anime/*/casts", "https://www.mau2.com/anime/*"],
+    matches: [
+      "https://www.mau2.com/anime/*/cast",
+      "https://www.mau2.com/anime/*/casts",
+      "https://www.mau2.com/anime/*",
+    ],
   },
   {
     group: "visualTweaks",
