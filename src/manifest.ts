@@ -6,6 +6,8 @@ import { createLinkVariants } from "./lib/scriptUtils";
 //@ts-ignore
 const isDev = process.env.NODE_ENV == "development";
 
+const firefox = process.env.BROWSER === "firefox";
+
 export default defineManifest({
   name: `${packageData.displayName || packageData.name}${isDev ? ` Development Build` : ""}`,
   description: packageData.description,
@@ -22,10 +24,14 @@ export default defineManifest({
     default_icon: "img/logo-48.png",
   },
   options_page: "options.html",
-  background: {
-    service_worker: "src/background/index.ts",
-    type: "module",
-  },
+  background: firefox
+    ? {
+        scripts: ["src/background/index.ts"],
+      }
+    : {
+        service_worker: "src/background/index.ts",
+        type: "module",
+      },
   content_scripts: [
     {
       matches: createLinkVariants("https://www.anisearch.com/**"),
@@ -50,4 +56,11 @@ export default defineManifest({
   ],
   default_locale: "en",
   permissions: ["sidePanel", "storage", "activeTab", "scripting", "unlimitedStorage"],
+  // @ts-ignore
+  browser_specific_settings: {
+    gecko: {
+      id: "asutils@crg.sh",
+      strict_min_version: "109.0",
+    },
+  },
 });

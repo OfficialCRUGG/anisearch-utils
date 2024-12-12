@@ -36,9 +36,13 @@
       chrome.storage.sync.getBytesInUse((bytes) => {
         syncBytes = formatBytes(bytes);
       });
-      chrome.storage.local.getBytesInUse((bytes) => {
-        localBytes = formatBytes(bytes);
-      });
+      if (chrome.storage.local.getBytesInUse) {
+        chrome.storage.local.getBytesInUse((bytes) => {
+          localBytes = formatBytes(bytes);
+        });
+      } else {
+        localBytes = "Can't determine on Firefox";
+      }
       setTimeout(() => {
         loaded = true;
       }, 100);

@@ -5,13 +5,15 @@ import path from "path";
 import sveltePreprocess from "svelte-preprocess";
 import manifest from "./src/manifest";
 
+const firefox = process.env.BROWSER === "firefox";
+
 export default defineConfig(({ mode }) => {
   const production = mode === "production";
 
   return {
     build: {
       emptyOutDir: true,
-      outDir: "build",
+      outDir: firefox ? "build/firefox" : "build/chrome",
       rollupOptions: {
         output: {
           chunkFileNames: "assets/chunk-[hash].js",
@@ -19,7 +21,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     plugins: [
-      crx({ manifest }),
+      crx({ manifest, browser: firefox ? "firefox" : "chrome" }),
       svelte({
         compilerOptions: {
           dev: !production,
