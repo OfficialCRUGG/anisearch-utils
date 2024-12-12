@@ -1,6 +1,5 @@
 {
-  "disclaimer": "This extension is not affiliated with or endored by aniSearch. It's a third-party tool.",
-  "copyright": "Available under the MIT License",
-  "storage.local": "Storage use (Mau2 Dictionaries)",
-  "storage.sync": "Storage use (Settings)"
+  "back": "Back",
+  "description": "Description",
+  "note": "Note"
 }
