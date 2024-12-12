@@ -1,9 +1,6 @@
 {
   "linkMau2.name": "Link to Mau2",
   "linkMau2.description": "Adds a link to the japanese voice cast page on Mau2",
-  "linkMau2Translate.name": "Link to Mau2 (Google Translate)",
-  "linkMau2Translate.description": "Adds a link to the japanese voice cast page on Mau2, translated through Google Translate (functions better as you'd expect, at least for the VA names, less for the characters)",
-  "linkMau2Translate.note": "This module is deprecated. It is instead suggested to use the regular Mau2 Link and then use the Mau2 Translator module.",
   "inputButtonColors.name": "Colorful Buttons",
   "inputButtonColors.description": "Ever clicked the wrong button? Now, all 'Replace' buttons are orange, and all 'Remove' buttons are red.",
   "mau2Translator.name": "Translator (mau2.com)",

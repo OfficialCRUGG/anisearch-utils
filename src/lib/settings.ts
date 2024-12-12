@@ -24,14 +24,6 @@ export const settings: Setting[] = [
     matches: createLinkVariants("/anime/*"),
   },
   {
-    group: "animePage",
-    id: "linkMau2Translate",
-    type: "boolean",
-    default: false,
-    module: true,
-    matches: createLinkVariants("/anime/*"),
-  },
-  {
     group: "input",
     id: "inputButtonColors",
     type: "boolean",
