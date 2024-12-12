@@ -6,7 +6,5 @@
   "inputButtonColors.name": "Colorful Buttons",
   "inputButtonColors.description": "Ever clicked the wrong button? Now, all 'Replace' buttons are orange, and all 'Remove' buttons are red.",
   "mau2Translator.name": "Translator (mau2.com)",
-  "mau2Translator.description": "Adds buttons on mau2.com to translate the entries into Romaji and English",
-  "fullWidth.name": "Full Width",
-  "fullWidth.description": "Makes the page full width"
+  "mau2Translator.description": "Adds buttons on mau2.com to translate the entries into Romaji and English"
 }
