@@ -16,14 +16,6 @@ export type Setting = BooleanSetting;
 
 export const settings: Setting[] = [
   {
-    group: "visualTweaks",
-    id: "fullWidth",
-    type: "boolean",
-    default: false,
-    module: true,
-    matches: createLinkVariants("/*"),
-  },
-  {
     group: "animePage",
     id: "linkMau2",
     type: "boolean",
