@@ -2,7 +2,10 @@ import { registerAdditionalButton } from "../lib/pageSpecific/animePageUtils";
 import { $, buildAsuButton, init } from "../lib/scriptUtils";
 
 init("linkMau2", () => {
-  const japaneseTitle = $("[role='doc-subtitle'] span.subheader[lang='ja']")?.textContent;
+  const subheader = $("[role='doc-subtitle'] span.subheader[lang='ja']")?.textContent;
+  if (!subheader) return;
+  const subheaderArray = subheader.split(" / ");
+  const japaneseTitle = subheaderArray[subheaderArray.length - 1];
   if (!japaneseTitle) return;
   const button = buildAsuButton({
     element: "a",
