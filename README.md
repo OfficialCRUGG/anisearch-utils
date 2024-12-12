@@ -1,6 +1,6 @@
 <div align="center">
 
-# aniSearch Utils
+# CRUGG's aniSearch Utils
 
 | Available in English | Verfügbar auf Deutsch |
 |----------------------|-----------------------|
@@ -8,10 +8,10 @@
   <a href="https://github.com/OfficialCRUGG/anisearch-utils/blob/main/README.de.md">Readme auf Deutsch</a>
 </div>
 
-aniSearch Utils (aSutils for short) is a browser extension that adds various (toggleable) features to aniSearch, mainly intended for *power users*[^1].
+CRUGG's aniSearch Utils (aSutils for short) is a browser extension that adds various (toggleable) features to aniSearch, mainly intended for *power users*[^1].
 
 > [!NOTE]
-> aniSearch Utils is not affiliated with or endorsed by aniSearch. This is a third-party extension.
+> CRUGG's aniSearch Utils is not affiliated with or endorsed by aniSearch. This is a third-party extension.
 
 ## Contents
 

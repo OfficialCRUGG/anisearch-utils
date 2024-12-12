@@ -1,6 +1,6 @@
 <div align="center">
 
-# aniSearch Helfer
+# CRUGG's aniSearch Helfer
 
 | Available in English | Verfügbar auf Deutsch |
 |----------------------|-----------------------|
@@ -8,10 +8,10 @@
   <a href="https://github.com/OfficialCRUGG/anisearch-utils/blob/main/README.md">Readme in English</a>
 </div>
 
-aniSearch Helfer (kurz aSutils oder aSu; vom englischen Namen "aniSearch Utils") ist eine Browserweiterung, die verschiedene (einzeln aktivierbare) Funktionen zu aniSearch hinzufügt, die hauptsächlich für *Power-User*[^1] gedacht sind.
+CRUGG's aniSearch Helfer (kurz aSutils oder aSu; vom englischen Namen "CRUGG's aniSearch Utils") ist eine Browserweiterung, die verschiedene (einzeln aktivierbare) Funktionen zu aniSearch hinzufügt, die hauptsächlich für *Power-User*[^1] gedacht sind.
 
 > [!NOTE]
-> Der aniSearch Helfer steht in keinerlei Verbindung zu aniSearch. Es handelt sich hierbei um eine Browsererweiterung eines Drittanbieters.
+> CRUGG's aniSearch Helfer steht in keinerlei Verbindung zu aniSearch. Es handelt sich hierbei um eine Browsererweiterung eines Drittanbieters.
 
 ## Inhaltsverzeichnis
 
