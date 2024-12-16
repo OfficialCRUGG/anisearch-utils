@@ -32,6 +32,14 @@ export const settings: Setting[] = [
     matches: createLinkVariants("/usercp/input/**"),
   },
   {
+    group: "input",
+    id: "keyboardShortcuts",
+    type: "boolean",
+    default: false,
+    module: true,
+    matches: createLinkVariants("/usercp/input/**"),
+  },
+  {
     group: "extrasExternal",
     id: "mau2Translator",
     type: "boolean",

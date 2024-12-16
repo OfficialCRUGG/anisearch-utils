@@ -7,6 +7,7 @@ export function log(module: string, message: string): void {
     registry: "#8E44AD",
     styles: "#F7CA18",
     error: "#952217",
+    keyboard: "#27AE60",
   };
 
   // Get the background color for the module or use the default

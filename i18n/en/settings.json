@@ -5,5 +5,8 @@
   "inputButtonColors.description": "Ever clicked the wrong button? Now, all 'Replace' buttons are orange, and all 'Remove' buttons are red.",
   "mau2Translator.name": "Translator (mau2.com)",
   "mau2Translator.description": "Adds buttons on mau2.com to translate the entries into Romaji and English",
-  "mau2Translator.note": "This module is highly experimental."
+  "mau2Translator.note": "This module is highly experimental.",
+  "keyboardShortcuts.name": "Keyboard Shortcuts",
+  "keyboardShortcuts.description": "Adds various keyboard shortcuts for adding data more easily",
+  "keyboardShortcuts.note": "This module currently supports anime voice actor lists and episode lists only. Above each list, you'll find a button to enable shortcuts for that specific area. You can then use the shortcuts shown on screen besides the elements to focus them (inputs) or click them (buttons & checkboxes). Tip: If you're focused on an input, you press ESC to unfocus it."
 }

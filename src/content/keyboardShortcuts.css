@@ -1,0 +1,16 @@
+@media screen and (min-width: 500px) {
+  ul.table > li:first-child {
+    width: 200px !important;
+  }
+}
+
+.asu-keyboard-indicator {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 20px;
+  width: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  margin-right: 6px;
+}
