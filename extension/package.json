@@ -20,7 +20,10 @@
     "build:ext": "vite build",
     "build:locales": "tsx buildLocales.ts",
     "build:zip": "node src/zip.js",
-    "build": "npm run build:ext && npm run build:locales && npm run build:zip",
+    "build:base": "npm run build:ext && npm run build:locales && npm run build:zip",
+    "build:chrome": "BROWSER=chrome VITE_BROWSER=chrome npm run build:base",
+    "build:firefox": "BROWSER=firefox VITE_BROWSER=firefox npm run build:base",
+    "build": "npm run build:chrome && npm run build:firefox",
     "preview": "vite preview",
     "fmt": "prettier --write '**/*.{svelte,ts,json,css,scss,md}'"
   },

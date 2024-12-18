@@ -20,8 +20,6 @@ import MainWindow from "../components/MainWindow.svelte";
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-
-  font-size: 150%;
 }
 
 :global(body) {

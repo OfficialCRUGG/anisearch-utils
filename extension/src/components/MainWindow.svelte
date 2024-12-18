@@ -12,6 +12,8 @@ import SettingInfoPage from "./pages/SettingInfoPage.svelte";
 let loaded: boolean = false;
 let baseSettings: Record<string, any> = {};
 
+const browser = import.meta.env.VITE_BROWSER;
+
 onMount(() => {
   const keys = getKeys();
   chrome.storage.sync.get(keys, (result) => {
@@ -31,7 +33,7 @@ onMount(() => {
 });
 </script>
 
-<div class="min-h-screen bg-dark-950 text-white">
+<div class="bg-dark-950 min-h-screen text-white browser-{browser}">
   {#if loaded}
     <Header />
     {#if $currentTab === "settings"}
@@ -51,3 +53,12 @@ onMount(() => {
     </div>
   {/if}
 </div>
+
+<style>
+:global(:root:has(.browser-chrome)) {
+  font-size: 150%;
+}
+:global(:root:has(.browser-firefox)) {
+  font-size: 125%;
+}
+</style>
