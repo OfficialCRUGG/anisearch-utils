@@ -8,9 +8,9 @@ const isDev = process.env.NODE_ENV == "development";
 
 const firefox = process.env.BROWSER === "firefox";
 
-export default defineManifest({
-  name: `${packageData.displayName || packageData.name}${isDev ? ` Development Build` : ""}`,
-  description: packageData.description,
+const manifest = defineManifest({
+  name: `__MSG_meta_name__${isDev ? ` Development Build` : ""}`,
+  description: "__MSG_meta_description__",
   version: packageData.version,
   manifest_version: 3,
   icons: {
