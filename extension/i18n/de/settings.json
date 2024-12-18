@@ -5,6 +5,7 @@
   "inputButtonColors.description": "Schon mal auf den falschen Button geklickt? Jetzt sind alle 'Ersetzen'-Buttons orange und alle 'Zurücksetzen'-Buttons rot.",
   "mau2Translator.name": "Übersetzer (mau2.com)",
   "mau2Translator.description": "Fügt auf mau2.com Buttons hinzu, um die Einträge in Romaji und Englisch zu übersetzen",
+  "mau2Translator.note": "Dieses Modul ist sehr experimentell.",
   "keyboardShortcuts.name": "Tastaturkürzel",
   "keyboardShortcuts.description": "Fügt verschiedene Tastaturkürzel hinzu, um Daten einfacher einzutragen",
   "keyboardShortcuts.note": "Dieses Modul unterstützt momentan nur Sprecherlisten und Episodenlisten. Oberhalb der jeweilligen Liste findet sich ein button um die Tastenkürzel für den jeweilligen Bereich zu aktivieren. Du kannst dann die Tastenkürzel verwenden, die neben den jeweilligen Elementen angezeigt werden, um sie zu fokussieren (Eingabefelder und Dropdowns) bzw. anzuklicken (Buttons und Checkboxen). Tipp: Wenn du ein Eingabefeld fokussiert hast, kannst du ESC drücken, um es zu entfokussieren."
