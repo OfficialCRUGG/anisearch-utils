@@ -1,6 +1,7 @@
 import { log } from "../lib/logger";
 import { $, $$, init } from "../lib/scriptUtils";
 import { httpRequestHtml, httpRequestJson } from "../lib/corsUtils";
+import { t } from "../lib/chromeI18n";
 
 /*
   This code is an absolute mess.
@@ -268,8 +269,10 @@ init("mau2Translator", () => {
   function injectFullListButton() {
     if (!(document.location.pathname.endsWith("/casts") || document.location.pathname.endsWith("/cast"))) return;
 
+    console.log(1);
+
     const button = createButton();
-    button.innerHTML = "Create Full List";
+    button.innerHTML = t("modules.mau2Translator.fullList.button");
     button.style.marginTop = "10px";
     button.addEventListener("click", () => {
       // Collect data
@@ -385,7 +388,10 @@ init("mau2Translator", () => {
       chrome.i18n.getMessage("modules_mau2Translator_fullList_hint3"),
     ].join("<br>");
 
-    const referenceEl = $("#animeBoxMain hr");
+    console.log(2);
+
+    const referenceEl = $("#animeBoxMain hr") ?? $("#footer hr");
+    console.log(referenceEl);
     referenceEl?.parentElement?.insertBefore(button, referenceEl);
     referenceEl?.parentElement?.insertBefore(hintSpan, referenceEl);
   }

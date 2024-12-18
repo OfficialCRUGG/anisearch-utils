@@ -30,6 +30,7 @@ init("keyboardShortcuts", () => {
   function buttonInject(selector: string, area: string) {
     return (el: HTMLElement) => {
       const target = $(selector) as HTMLInputElement;
+      if (!target) return;
       const cleanValue = target.value.replace(/\[.*\] /, "");
       const key = el.textContent;
       target.value = activeArea === area ? `[${key}] ${cleanValue}` : cleanValue;

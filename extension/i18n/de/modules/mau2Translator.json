@@ -1,6 +1,7 @@
 {
   "error.label": "Ein Fehler ist aufgetreten: ",
   "error.queueStopped": "Die Warteschlange, die das Problem verursacht hat wurde gestoppt. Bitte versuche, die Seite zu aktualisieren und die Übersetzungen erneut zur Warteschlange hinzuzufügen. Wenn das Problem weiterhin besteht, hast du wahrscheinlich das \"Ratelimit\" des jeweiligen Anbieters erreicht. In diesem Fall, musst du bis ca. 10-30 Minuten warten und es dann erneut versuchen.",
+  "fullList.button": "Erstelle vollständige Liste",
   "fullList.hint1": "Wichtig: Verwende diese Funktion nur, wenn du noch KEINE Einträge in den einzelnen Listen übersetzt hast.",
   "fullList.hint2": "Wenn die Überschriften der einzelnen Listen keine Zahlen enthalten oder \"ungewöhnliche\" Episodennummern wie \"1.5\" enthalten, funktioniert diese Funktion NICHT wie erwartet.",
   "fullList.hint3": "Beachte außerdem bitte, dass diese Funktion nur Episoden berücksichtigt, die auf der aktuellen Seite sind. Für Animes, die mehrere Seiten haben, kannst du diese Funktion trotzdem verwenden, aber sie enthält nur Synchronsprecher, Rollen und Episoden von der aktuellen Seite."

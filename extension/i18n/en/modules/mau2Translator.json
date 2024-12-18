@@ -1,6 +1,7 @@
 {
   "error.label": "An error occured: ",
   "error.queueStopped": "The queue in question has been stopped. Please try refreshing the page and re-queueing translations. If the issue persists, you were ratelimited by the service used. In that case, wait 10-30 minutes and try again.",
+  "fullList.button": "Create Full List",
   "fullList.hint1": "Important: Only use this when you have NOT already translated anything in the individual lists.",
   "fullList.hint2": "Also, if the Headings of the individual Lists don't contain numbers, or contain unusual episode numerations like \"1.5\", this feature will NOT work as expected.",
   "fullList.hint3": "Lastly, please note that this only affects episodes that are on a singular page. For animes that have multiple pages, you can still use this feature, but it will only contains actors, roles, and episodes from the current page."
