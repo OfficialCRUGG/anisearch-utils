@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.1 [2024.12.18]
+
+This update mainly does some minor changes for compliance with Firefox Extension Guidelines.
+
+### General
+
+- Fixed the 32x32 icon previously being 34x34
+- No longer use .innerHTML
+- Bump minimum Firefox version from 109 to 126
+
 ## 1.0.0 [2024.12.18]
 
 ### General
