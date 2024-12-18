@@ -38,7 +38,7 @@ init("mau2Translator", () => {
 
   function createButton() {
     const button = document.createElement("button");
-    button.innerHTML = "あ→a";
+    button.textContent = "あ→a";
     button.style.marginLeft = "7px";
     button.style.border = "1px solid #ac8553;";
     button.style.backgroundColor = "#fcdfbb";
@@ -191,7 +191,7 @@ init("mau2Translator", () => {
   function setValue(el: HTMLElement, type: QueueType, value: string) {
     const childElement = el.querySelector(type === "romaji" ? ".asu-mau2-romaji" : ".asu-mau2-translated");
     if (!childElement) return;
-    childElement.innerHTML = value;
+    childElement.textContent = value;
   }
 
   function beginQueues() {
@@ -272,7 +272,7 @@ init("mau2Translator", () => {
     console.log(1);
 
     const button = createButton();
-    button.innerHTML = t("modules.mau2Translator.fullList.button");
+    button.textContent = t("modules.mau2Translator.fullList.button");
     button.style.marginTop = "10px";
     button.addEventListener("click", () => {
       // Collect data
@@ -382,13 +382,20 @@ init("mau2Translator", () => {
     hintSpan.style.fontSize = "14px";
     hintSpan.style.color = "#777";
     hintSpan.style.display = "block";
-    hintSpan.innerHTML = [
-      chrome.i18n.getMessage("modules_mau2Translator_fullList_hint1"),
-      chrome.i18n.getMessage("modules_mau2Translator_fullList_hint2"),
-      chrome.i18n.getMessage("modules_mau2Translator_fullList_hint3"),
-    ].join("<br>");
+    const messages = [
+      t("modules.mau2Translator.fullList.hint1"),
+      t("modules.mau2Translator.fullList.hint2"),
+      t("modules.mau2Translator.fullList.hint3"),
+    ];
+    messages.forEach((message, index) => {
+      const textNode = document.createTextNode(message);
+      hintSpan.appendChild(textNode);
 
-    console.log(2);
+      if (index < messages.length - 1) {
+        const br = document.createElement("br");
+        hintSpan.appendChild(br);
+      }
+    });
 
     const referenceEl = $("#animeBoxMain hr") ?? $("#footer hr");
     console.log(referenceEl);
