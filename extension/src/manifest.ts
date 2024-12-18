@@ -56,11 +56,16 @@ const manifest = defineManifest({
   ],
   default_locale: "en",
   permissions: ["sidePanel", "storage", "activeTab", "scripting", "unlimitedStorage"],
+});
+
+if (firefox) {
   // @ts-ignore
-  browser_specific_settings: {
+  manifest.browser_specific_settings = {
     gecko: {
       id: "asutils@crg.sh",
       strict_min_version: "109.0",
     },
-  },
-});
+  };
+}
+
+export default manifest;
