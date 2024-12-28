@@ -71,7 +71,7 @@ export default defineConfig({
             label: "Chrome Web Store",
             icon: "external",
             link: "https://chromewebstore.google.com/detail/cruggs-anisearch-utils/eanhcibbgmgechngeeihlkijakallpeb",
-            badge: { text: "v1.0.0" },
+            badge: { text: "v1.0.2" },
           },
           {
             label: "Firefox Addons",
