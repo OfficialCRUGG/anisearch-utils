@@ -72,7 +72,7 @@ init("mau2Translator", () => {
     if (document.location.pathname.endsWith("/casts") || document.location.pathname.endsWith("/cast")) {
       // Is on /anime/:anime/cast(s)
       $$(".animeCast1.list").forEach((castList) => {
-        const header = castList.querySelector('th[colspan="2"]');
+        const header = castList.querySelector('th[colspan="2"], th[colspan="3"]');
         if (!header) return;
         const button = createTranslationButton(castList);
         header.appendChild(button);
@@ -279,7 +279,7 @@ init("mau2Translator", () => {
       const voiceActors: { part: string; actor: string; episodes: string[] }[] = [];
       const episodeLists = $$(".animeCast1.list");
       episodeLists.forEach((list) => {
-        const heading = list.querySelector("th[colspan='2']")?.textContent;
+        const heading = list.querySelector("th[colspan='2'], th[colspan='3']")?.textContent;
         const episode = heading?.match(/\d+/)?.[0];
         const actors = list.querySelectorAll("tr:has(td.pgActor)");
         actors.forEach((item) => {
