@@ -77,7 +77,7 @@ export default defineConfig({
             label: "Firefox Addons",
             icon: "external",
             link: "https://addons.mozilla.org/firefox/addon/cruggs-asu/",
-            badge: { text: "v1.0.1" },
+            badge: { text: "v1.0.2" },
           },
         ]),
       ],
