@@ -1,0 +1,46 @@
+---
+title: Übersetzer (mau2.com)
+---
+
+import {Aside} from "@astrojs/starlight/components";
+
+- **Kategorie:** Extras (Externe Seiten)
+- **Modul-ID:** `mau2Translator`
+
+Dieses Modul beinflußt nicht aniSearch, sondern Mau2, eine japanische Webseite, die Listen von Synchronsprechern für Anime bereitstellt, was sehr hilfreich ist, um diese Daten zu aniSearch beizutragen.
+
+<Aside type="caution">
+Dieses Modul ist noch sehr experimentell und funktioniert möglicherweise nicht wie erwartet.
+Bevor du es verwendest, lies bitte auch die unten stehenden Hinweise.
+</Aside>
+
+## Verwendungshinweise
+
+Dieses Modul verwendet Google Translate und Romajidesu, welche externe Dienste sind. Wenn du dieses Modul verwendest, wird dein Browser Anfragen an diese Dienste senden, um den Text auf Mau2 zu übersetzen.
+
+Außerdem haben diese Dienste Ratelimits. Im Grunde bedeutet das, dass wenn du sie zu oft in einem kurzen Zeitraum verwendest, du vorübergehend blockiert werden kannst. Diese Limits existieren auch, wenn du sie manuell verwendest. Wenn du diese Limits erreichst, ist das kein Weltuntergang, sondern bedeutet nur, dass du sie für eine kurze Zeit nicht verwenden kannst. Normalerweise ist das etwas zwischen fünf und 30 Minuten.
+
+## Übersetzung
+
+Übersetzung funktioniert auf der Hauptseite eines Anime, sowie auf den `/casts` (oder `/cast` für manche Anime) Unterseiten.
+
+Oben in den jeweiligen Tabellen findest du einen neuen Button, auf dem "あ→a" steht. Wenn du darauf klickst, wird die Übersetzung der gesamten Tabelle in die Warteschlange gestellt. Das kann etwas dauern, aber du kannst den Fortschritt in Echtzeit sehen.
+
+<video width="100%" controls>
+  <source src="/videos/mau2Translator1.mp4" type="video/mp4" />
+  Dein Browser unterstützt den Video-Tag nicht.
+</video>
+
+## Erstellung einer vollständigen Liste
+
+Außerdem kannst du alle separaten Episodentabellen in eine einzige Tabelle mit den Episodennummern in einer zusätzlichen Spalte zusammenführen.
+
+<Aside type="note">
+Längere Anime sind auf Mau2 ggf. auf mehrere Seiten aufgeteilt. Das Modul kann nur eine Liste mit Rollen und Episoden auf der aktuellen Seite erstellen. Dies liegt an technischen Einschränkungen, für die ich leider noch keine Lösung gefunden habe.
+</Aside>
+
+<Aside type="caution">
+Wenn du eine vollständige Liste erstellen möchtest, kannst du dies nicht tun, wenn du bereits einzelne Episodenlisten übersetzt hast. Wenn du dies schon getan hast, lade die Seite neu.
+</Aside>
+
+Unten auf der Seite mit den Rollen pro Episode (/cast oder /casts) findest du einen "Vollständige Liste erstellen" Button. Klicke darauf, um die vollständige Liste zu erstellen.

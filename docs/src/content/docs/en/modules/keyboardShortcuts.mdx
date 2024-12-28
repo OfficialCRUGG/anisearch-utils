@@ -1,0 +1,71 @@
+---
+title: Keyboard Shortcuts
+---
+
+- **Category:** Input
+- **Module ID:** `keyboardShortcuts`
+
+This module adds the ability to use keyboard shortcuts for inputting data. This is especially useful when inputting a lot of data in bulk, such as adding a long list of voice actors. Whilst at first, you may be a bit slower as you're getting used to the shortcut, but once you're familiar with them, it can be a massive time saver.
+
+## How to use
+
+When the module is enabled, you'll see an "Activate shortcuts for this section" button in each area that is supported by this module. Currently, only the "Voice Actors" and "Episode List" sections on Anime are supported.
+
+Once you click the button, key indicators will show up in front of any fields or buttons that have a shortcut.
+
+<video width="100%" controls>
+  <source src="/videos/keyboardShortcuts.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+## Shortcut Usage
+
+- **Text Inputs**: When pressing the shortcut for a text input, it is automatically focused so you can start typing.
+- **Dropdown Fields**: When pressing the shortcut for a dropdown field, it is selected. You can then use the arrow key down to open it and then use the arrow keys to navigate through the options.
+- **Buttons**: When pressing the shortcut for a button, it is clicked.
+- **Checkboxes**: When pressing the shortcut for a checkbox, it is toggled.
+
+When an input is focused, shortcuts are disabled to prevent conflicts. You can press the <kbd>ESC</kbd> key to unfocus the input and re-enable the shortcuts.
+
+## Keymap
+
+In the future, you'll be able to customize the keymap to your liking. For now, here's the default keymap:
+
+### Default Keymap
+
+```plaintext
+voiceActors.characterType 1
+voiceActors.character 2
+voiceActors.japaneseVa 3
+voiceActors.japaneseRole 4
+voiceActors.englishVa 5
+voiceActors.englishRole 6
+voiceActors.germanVa 7
+voiceActors.germanRole 8
+voiceActors.spanishVa 9
+voiceActors.spanishRole 0
+voiceActors.frenchVa q
+voiceActors.frenchRole w
+voiceActors.italianVa e
+voiceActors.italianRole r
+voiceActors.modNote a
+voiceActors.action s
+voiceActors.add y
+voiceActors.change x
+voiceActors.reset c
+episodes.episode q
+episodes.title w
+episodes.original e
+episodes.runtime r
+episodes.airdate a
+episodes.tags_filler 1
+episodes.tags_recap 2
+episodes.bonus s
+episodes.action d
+episodes.add y
+episodes.change x
+episodes.reset c
+episodes.shortcuts f
+episodes.shortcuts_apply v
+episodes.shortcuts_reset b
+```

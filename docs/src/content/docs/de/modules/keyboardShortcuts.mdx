@@ -1,0 +1,72 @@
+---
+title: Tastaturkürzel
+---
+
+- **Kategorie:** Eingabemaske
+- **Modul-ID:** `keyboardShortcuts`
+
+Dieses Modul fügt die Möglichkeit hinzu, Tastaturkürzel zum Eingeben von Daten zu verwenden. Dies ist besonders nützlich, wenn man viele Daten auf einmal eingeben möchte, z. B. eine lange Liste von Synchronsprechern. Zu Beginn ist der Ablauf eventuell etwas langsamer, aber wenn man sich an die Kürzel gewöhnt hat, kommt man definitiv schneller vorran.
+
+## Benutzung
+
+Wenn das Modul aktiviert ist, siehst du in jedem Bereich, der von diesem Modul unterstützt wird, einen "Aktiviere Tastaturkürzel für diesen Bereich" Button. Derzeit werden nur die "Synchronsprecher" und "Episodenliste" Abschnitte bei Anime unterstützt.
+
+Sobald du den Button geklickt hast, erscheinen Tastenkürzel vor den Feldern oder Buttons, die einen Shortcut haben.
+
+<video width="100%" controls>
+  <source src="/videos/keyboardShortcuts.mp4" type="video/mp4" />
+  Dein Browser unterstützt den Video-Tag nicht.
+</video>
+
+## Tastaturkürzelverwendung
+
+- **Textfelder**: Wenn du den Kürzel für ein Textfeld drückst, wird es automatisch fokussiert, sodass du direkt mit dem Schreiben beginnen kannst.
+- **Dropdowns**: Wenn du den Kürzel für ein Dropdown-Feld drückst, wird es ausgewählt. Du kannst dann die Pfeiltaste nach unten drücken, um es zu öffnen, und dann die Pfeiltasten verwenden, um durch die Optionen zu navigieren.
+- **Buttons**: Wenn du den Kürzel für einen Button drückst, wird er geklickt.
+- **Checkboxen**: Wenn du den Kürzel für eine Checkbox drückst, wird sie deaktiviert bzw. aktiviert.
+
+When an input is focused, shortcuts are disabled to prevent conflicts. You can press the <kbd>ESC</kbd> key to unfocus the input and re-enable the shortcuts.
+Wenn ein Element fokussiert ist, werden die Tastenkürzel deaktiviert, um Konflikte beim Schreiben zu vermeiden. Du kannst jedoch <kbd>ESC</kbd> benutzen, um das Element zu entfokussieren und die Tastenkürzel wieder zu aktivieren.
+
+## Keymap
+
+In der Zukunft wird es möglich sein, die Keymap (Belegung der Tasten) nach deinen Wünschen anzupassen. Hier ist die Standard-Keymap:
+
+### Standard-Keymap
+
+```plaintext
+voiceActors.characterType 1
+voiceActors.character 2
+voiceActors.japaneseVa 3
+voiceActors.japaneseRole 4
+voiceActors.englishVa 5
+voiceActors.englishRole 6
+voiceActors.germanVa 7
+voiceActors.germanRole 8
+voiceActors.spanishVa 9
+voiceActors.spanishRole 0
+voiceActors.frenchVa q
+voiceActors.frenchRole w
+voiceActors.italianVa e
+voiceActors.italianRole r
+voiceActors.modNote a
+voiceActors.action s
+voiceActors.add y
+voiceActors.change x
+voiceActors.reset c
+episodes.episode q
+episodes.title w
+episodes.original e
+episodes.runtime r
+episodes.airdate a
+episodes.tags_filler 1
+episodes.tags_recap 2
+episodes.bonus s
+episodes.action d
+episodes.add y
+episodes.change x
+episodes.reset c
+episodes.shortcuts f
+episodes.shortcuts_apply v
+episodes.shortcuts_reset b
+```

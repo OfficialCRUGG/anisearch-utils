@@ -1,0 +1,45 @@
+/* Dark mode colors. */
+:root {
+  --sl-color-accent-low: #3b1900;
+  --sl-color-accent: #a15100;
+  --sl-color-accent-high: #f7b991;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #f0edeb;
+  --sl-color-gray-2: #c5c1bf;
+  --sl-color-gray-3: #918a85;
+  --sl-color-gray-4: #5d5752;
+  --sl-color-gray-5: #3d3733;
+  --sl-color-gray-6: #2b2522;
+  --sl-color-black: #1a1816;
+  --sl--kbd-border-color: var(--sl-color-gray-4);
+}
+/* Light mode colors. */
+:root[data-theme="light"] {
+  --sl-color-accent-low: #fbccad;
+  --sl-color-accent: #a45200;
+  --sl-color-accent-high: #502500;
+  --sl-color-white: #1a1816;
+  --sl-color-gray-1: #2b2522;
+  --sl-color-gray-2: #3d3733;
+  --sl-color-gray-3: #5d5752;
+  --sl-color-gray-4: #918a85;
+  --sl-color-gray-5: #c5c1bf;
+  --sl-color-gray-6: #f0edeb;
+  --sl-color-gray-7: #f7f6f5;
+  --sl-color-black: #ffffff;
+
+  --sl--kbd-border-color: var(--sl-color-gray-3);
+}
+
+.sl-badge {
+  font-family: var(--__sl-font);
+}
+
+.content-panel kbd {
+  border-width: 2px 2px 5px 2px;
+  border-style: solid;
+  border-color: var(--sl--kbd-border-color);
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-family: var(--__sl-font);
+}

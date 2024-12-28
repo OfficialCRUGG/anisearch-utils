@@ -1,0 +1,46 @@
+---
+title: Translator (mau2.com)
+---
+
+import {Aside} from "@astrojs/starlight/components";
+
+- **Category:** Extras (External Sites)
+- **Module ID:** `mau2Translator`
+
+This module does not impact aniSearch, but instead Mau2, a japanese website that provides lists of voice actors for anime which is extremely helpful for contributing this data to aniSearch.
+
+<Aside type="caution">
+This module is still very experimental and may not work as expected.
+Before using it, also please make sure to read the usage notes below.
+</Aside>
+
+## Usage notes
+
+This module relies on Google Translate and Romajidesu, which are external services. When using this module, your browser will make requests to these services to translate the text on Mau2.
+
+Additionally, these services impose ratelimits. Essentially, when using them too much in a short period of time, you may be temporarily blocked from using them. These limits also exist when usign them manually. If you reach these limits, it's not the end of the world, it just means that you can't use them for a short period of time. Usually this is something between five minutes and thirty minutes.
+
+## Translation
+
+Translation works on the main page of an anime, as well as the `/casts` (or `/cast` for some anime) subpages.
+
+At the top of the tables, you should find a new button that says "あ→a". Clicking this will queue the translation of the entire table. This may take a bit, but you can see progress in real time.
+
+<video width="100%" controls>
+  <source src="/videos/mau2Translator1.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+## Full List Compilation
+
+Additionally, you can compile all the separate episode tables into a singular table with the episode numbers in an additional column.
+
+<Aside type="note">
+Longer anime may some times be split onto multiple pages on Mau2. The module can only compile a list with roles and episodes on the current page. This is due to technical limitations I have not found a workaround for yet unfortunately.
+</Aside>
+
+<Aside type="caution">
+If you want to compile a full list, you cannot do this if you have already translated individual episode lists. If you have, reload the page.
+</Aside>
+
+At the bottom of the per episode cast page (/cast or /casts), you will find a "Create Full List" Button. Press this button to compile the complete list.

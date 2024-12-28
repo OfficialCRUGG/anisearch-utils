@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    (function () {
+      // Define supported locales and default locale
+      const supportedLocales = ["en", "de"];
+      const defaultLocale = "en";
+
+      // Get the user's browser language
+      // @ts-expect-error: legacy API
+      const userLocale = navigator.language || navigator.userLanguage;
+
+      // Extract the language code (e.g., "en" from "en-US")
+      const languageCode = userLocale.split("-")[0];
+
+      // Determine the redirect target
+      const targetLocale = supportedLocales.includes(languageCode) ? languageCode : defaultLocale;
+
+      // Redirect to the appropriate locale
+      window.location.href = `/${targetLocale}/`;
+    })();
+  </script>
+  <style>
+    body {
+      background-color: #1a1816;
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    p {
+      margin: 0.25rem 0;
+      padding: 0;
+    }
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <p>Redirecting based on your browser language...</p>
+  <noscript>  
+    <p>JavaScript is disabled. Please enable it to be redirected.</p>
+    <p>Alternatively, please click <a href="/en">here</a>.</p>
+  </noscript>
+</body>
+</html>

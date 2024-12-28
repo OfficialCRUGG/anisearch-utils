@@ -1,0 +1,56 @@
+---
+title: Changelog
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside>
+Bitte berücksichtige, dass es aufgrund der Bearbeitungszeiten der Erweiterungs-Stores abhängig deines Browsers etwas dauern kann, bis du ein bestimmtes Update erhältst.
+
+Die momentan installierte Version der Erweiterung kannst du auf dem "Informationen" Tab einsehen, falls du Version 1.0.2 oder neuer installiert hast.
+</Aside>
+
+## v1.0.1 [2024.12.18]
+
+Dieses Update beinhaltet hauptsächlich kleinere Änderungen, um den Firefox-Erweiterungsrichtlinien zu entsprechen.
+
+### Allgemein
+
+- Das 32x32 Icon hat nun die korrekte Größe
+- `.innerHTML` wird nicht mehr verwendet
+- Die Firefox Mindestversion wurde von 109 auf 126 erhöht
+
+## v1.0.0 [2024.12.18]
+
+### Allgemein
+
+- Die Erweiterung wurde von "aniSearch Helfer" in "CRUGG's aniSearch Helfer" umbenannt, um mögliche Verwirrungen zu vermeiden.
+- Unterstützung für Firefox hinzugefügt
+- Komplett überarbeitete Benutzeroberfläche
+
+### Module
+
+#### Volle Breite
+
+- Das Modul wurde entfernt, da eine ähnliche Funktionalität bereits auf aniSearch existiert.
+
+#### Mau2 Übersetzer
+
+- Ein Button wurde hinzugefügt, der es ermöglicht, alle separaten Episodentabellen in eine einzige Tabelle mit einem "Episoden"-Feld und ohne Duplikate zusammenzuführen.
+
+#### Mau2 Link
+
+- Der japanische Name wird nun korrekt extrahiert
+
+#### Tastaturkürzel
+
+- Dieses neue Modul wurde hinzugefügt, um das Hinzufügen vieler Einträge zu einer Liste (derzeit nur Episoden und Synchronsprecher) zu beschleunigen.
+
+## v0.2.0 [2024.12.10]
+
+- Das "Volle Breite" Modul wurde hinzugefügt
+- Behebt [#1](https://github.com/OfficialCRUGG/anisearch-utils/issues/1), wodurch der Mau2 Übersetzer auf manchen Anime-Cast-Seiten nicht funktioniert hat (die Seiten, die nach Episoden gruppiert sind)
+
+## v0.1.0 [2024.12.09]
+
+- Erstveröffentlichung
