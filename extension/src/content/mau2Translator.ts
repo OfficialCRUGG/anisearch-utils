@@ -9,6 +9,19 @@ import { t } from "../lib/chromeI18n";
   TODO: Improve. One day. When I feel insane enough to touch this again.
 */
 
+const japaneseNumerals: { [key: string]: number } = {
+  一: 1,
+  二: 2,
+  三: 3,
+  四: 4,
+  五: 5,
+  六: 6,
+  七: 7,
+  八: 8,
+  九: 9,
+  十: 10,
+};
+
 init("mau2Translator", () => {
   type QueueItem = {
     string: string;
@@ -280,7 +293,12 @@ init("mau2Translator", () => {
       const episodeLists = $$(".animeCast1.list");
       episodeLists.forEach((list) => {
         const heading = list.querySelector("th[colspan='2'], th[colspan='3']")?.textContent;
-        const episode = heading?.match(/\d+/)?.[0];
+        let episode = heading?.match(/\d+/)?.[0];
+        if (!episode) {
+          const jpEpisode = heading?.match(/[一二三四五六七八九十]+/)?.[0];
+          if (!jpEpisode) return;
+          episode = String([...jpEpisode].reduce((acc, cur) => acc + japaneseNumerals[cur], 0));
+        }
         const actors = list.querySelectorAll("tr:has(td.pgActor)");
         actors.forEach((item) => {
           const part = item.querySelector(".pgPart")?.textContent;
