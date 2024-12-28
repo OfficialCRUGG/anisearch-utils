@@ -17,6 +17,8 @@
   },
   "scripts": {
     "dev": "vite",
+    "dev:chrome": "BROWSER=chrome VITE_BROWSER=chrome npm run dev",
+    "dev:firefox": "BROWSER=firefox VITE_BROWSER=firefox npm run dev",
     "build:ext": "vite build",
     "build:locales": "tsx buildLocales.ts",
     "build:zip": "node src/zip.js",
