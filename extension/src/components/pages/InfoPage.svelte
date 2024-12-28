@@ -50,7 +50,7 @@ onMount(() => {
   <Card title={t("info.notes")}>
     <div class="flex flex-col space-y-1 text-xs text-white/50">
       <div>
-        <p>{t("meta.name")} v1.0.1</p>
+        <p>{t("meta.name")} v1.0.2</p>
         <p>© 2024 CRUGG<br />{t("info.copyright")}</p>
       </div>
       <p>{t("info.disclaimer")}</p>
