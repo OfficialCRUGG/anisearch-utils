@@ -1,0 +1,27 @@
+{
+  "name": "companion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/discord-rich-presence": "^0.0.2",
+    "@types/node": "^22.10.2",
+    "tsc-watch": "^6.2.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "clipboardy": "^4.0.0",
+    "discord-rich-presence": "^0.0.8",
+    "node-systray-v2": "github:Edgar-P-yan/node-systray-v2",
+    "yaml": "^2.6.1"
+  }
+}

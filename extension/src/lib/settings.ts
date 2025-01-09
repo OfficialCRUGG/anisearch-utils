@@ -40,6 +40,14 @@ export const settings: Setting[] = [
     matches: createLinkVariants("/usercp/input/**"),
   },
   {
+    group: "experiments",
+    id: "richPresence",
+    type: "boolean",
+    default: false,
+    module: true,
+    matches: createLinkVariants("/**"),
+  },
+  {
     group: "extrasExternal",
     id: "mau2Translator",
     type: "boolean",
